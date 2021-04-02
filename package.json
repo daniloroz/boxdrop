@@ -1,4 +1,8 @@
 {
+  "private": true,
+  "workspaces":[
+    "packages/*"
+  ],
   "dependencies": {
     "@chakra-ui/react": "^1.4.2",
     "@emotion/react": "^11",
