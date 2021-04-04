@@ -1,6 +1,7 @@
 {
   "name": "@boxdrop/core",
   "version": "1.0.0",
+  "main": "./index.ts",
   "dependencies": {
     "cross-env": "5.0.5",
     "react-redux": "^7.2.3",
