@@ -13,11 +13,34 @@ import {
   import React, { useState } from 'react';
   import { LoginForm } from '../../components/LoginForm';
 
+  const VARIANT_COLOR = 'teal'
+
+
   const LoginPage = () => {
   
     return (
       <>
-        <LoginForm/>
+        <Flex minHeight='100vh' width='full' align='center' justifyContent='center'>
+          <Box 
+              borderWidth={1}
+              px={4}
+              width='full'
+              maxWidth='500px'
+              borderRadius={4}
+              textAlign='center'
+              boxShadow='lg'
+            >
+            <Box p={4}>
+              <Box textAlign='center'>
+                <Heading>Sign In to Your Account</Heading>
+                  <Text>
+                    Or <Link color={`${VARIANT_COLOR}.500`}>start your 14 days trial</Link>
+                  </Text>
+              </Box>
+              <LoginForm/>
+            </Box>
+          </Box>
+        </Flex>
       </>
     );
   };
