@@ -1,54 +1,84 @@
 import {
-    Box,
-    Button,
-    Divider,
-    Flex,
-    FormControl,
-    FormLabel,
-    Input,
-    InputGroup,
-    InputRightElement,
-    Spinner,
-    Text,
-    Link,
-    Checkbox,
-    Stack,
-  } from '@chakra-ui/react';
+  Link,
+  ThemeProvider,
+  theme,
+  ColorModeProvider,
+  CSSReset,
+  Box,
+  Flex,
+  IconButton,
+  useColorMode,
+  Heading,
+  Text,
+  FormControl,
+  FormLabel,
+  Input,
+  Stack,
+  Checkbox,
+  Button,
   
-  import React, { useState } from 'react';
-  
-  export const LoginForm = () => {
-  
-    const [showPassword, setShowPassword] = useState<boolean>(false);
-    const [email, setEmail] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
-    const VARIANT_COLOR = 'teal'
-  
-    return (
-        <Box my={8} textAlign='left'>
-      <form>
+} from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-        <FormControl>
-          <FormLabel>Email address</FormLabel>
-          <Input type='email' placeholder='Enter your email address' />
-        </FormControl>
+export const LoginForm = () => {
 
-        <FormControl mt={4}>
-          <FormLabel>Password</FormLabel>
-          <Input type='password' placeholder='Enter your password' />
-        </FormControl>
+  return (
+    //Login Area
+    <Flex minHeight='100vh' width='full' align='center' justifyContent='center'>
+      <Box 
+        borderWidth={1}
+        px={1}
+        width='full'
+        maxWidth='500px'
+        borderRadius={4}
+        textAlign='center'
+        boxShadow='lg'
+      >
+        {/*Login Header */}
+        <Box p={4} pt={10} pl={10}>
+          <Box textAlign='left'>
+            <Heading as="h3" size="lg">Sign in to your account</Heading>
+          </Box>
+          {/*Login Form*/}
+          <Box my={8} textAlign='left'>
+            <form>
 
-        <Stack isInline justifyContent='space-between' mt={4}>
-            <Box>
-              <Checkbox>Remember Me</Checkbox>
-            </Box>
-            <Box>
-              <Link color={`${VARIANT_COLOR}.500`}>Forgot your password?</Link>
-            </Box>
-        </Stack>
+              <FormControl>
+                <FormLabel>Email</FormLabel>
+                <Input type='email' placeholder='Enter your email address' />
+              </FormControl>
 
-        <Button variantColor={VARIANT_COLOR}  width='full' mt={4}>Sign In</Button>
-      </form>
-    </Box>
-    );
-  };
+              <FormControl mt={4}>
+                <FormLabel>Password</FormLabel>
+                <Input type='password' placeholder='Enter your password' />
+              </FormControl>
+
+              <Stack isInline justifyContent='space-between' mt={4}>
+                  <Box>
+                    <Checkbox colorScheme="orange">Remember Me</Checkbox>
+                  </Box>
+                  <Box>
+                    <Link fontSize="12" color="orange.500">Forgot your password?</Link>
+                  </Box>
+              </Stack>
+
+              <Button colorScheme="orange"  width='full' mt={4}>Sign In</Button>
+            </form>
+            <Text fontSize="12" pt={3}>
+              Don't have an account?{" "}
+              <Link fontSize="12" color="orange.500" href="#">
+                Sign Up.
+              </Link>
+            </Text>
+          </Box>
+        </Box>
+      </Box>
+    </Flex>
+    
+  )
+};
+
+
+
+export default LoginForm;
