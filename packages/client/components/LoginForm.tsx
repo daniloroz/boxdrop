@@ -21,6 +21,8 @@ import {
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
+
+
 export const LoginForm = () => {
 
   return (
@@ -36,7 +38,7 @@ export const LoginForm = () => {
         boxShadow='lg'
       >
         {/*Login Header */}
-        <Box p={4} pt={10} pl={10}>
+        <Box p={4} pt={10} pl={10} pr={10}>
           <Box textAlign='left'>
             <Heading as="h3" size="lg">Sign in to your account</Heading>
           </Box>
@@ -63,7 +65,7 @@ export const LoginForm = () => {
                   </Box>
               </Stack>
 
-              <Button colorScheme="orange"  width='full' mt={4}>Sign In</Button>
+              <Button width='full' mt={4} colorScheme="orange">Sign In</Button>
             </form>
             <Text fontSize="12" pt={3}>
               Don't have an account?{" "}
