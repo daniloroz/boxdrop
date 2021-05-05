@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import LoginPage from "../pages/login/login"
+import SignUpPage from "../pages/signup/signup"
+import {NavBar} from "../components/Navbar"
 
 export default function Home() {
   return (
@@ -10,7 +12,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <LoginPage></LoginPage>
+      {/*<LoginPage></LoginPage>*/}
+      <SignUpPage/>
+      
+
     </div>
   )
 }

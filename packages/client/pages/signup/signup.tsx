@@ -10,14 +10,14 @@ import {
     Spinner,
   } from '@chakra-ui/react';
   import React, { useState } from 'react';
+  import { SignUpForm } from '../../components/SignUpForm';
+
   
   const SignUpPage = () => {
   
     return (
       <>
-        <Flex>
-              
-        </Flex>
+        <SignUpForm/>
       </>
     );
   };
