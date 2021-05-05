@@ -58,15 +58,15 @@ export const LoginForm = () => {
                     <Checkbox colorScheme="orange">Remember Me</Checkbox>
                   </Box>
                   <Box>
-                    <Link fontSize="12" color="orange.500">Forgot your password?</Link>
+                    <Link fontSize="12" color="#ffa31a">Forgot your password?</Link>
                   </Box>
               </Stack>
 
-              <Button width='full' mt={4} colorScheme="orange">Sign In</Button>
+              <Button width='full' mt={4} background="#ffa31a">Sign In</Button>
             </form>
             <Text fontSize="12" pt={3}>
               Don't have an account?{" "}
-              <Link fontSize="12" color="orange.500" href="#">
+              <Link fontSize="12" color="#ffa31a" href="#">
                 Sign Up.
               </Link>
             </Text>

@@ -75,9 +75,9 @@ import {
 
             
 
-            <Button width='full' mt={4} colorScheme="orange">Sign In</Button>
+            <Button width='full' mt={4} background="#ffa31a">Sign In</Button>
             <Flex mt={2} flexDir='column'>
-                <Link href='/' color='orange.500' fontSize="12">Already have an account?</Link>
+                <Link href='/' color='#ffa31a' fontSize="12">Already have an account?</Link>
             </Flex>
           </form>
         </Box>
